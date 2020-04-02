@@ -8,6 +8,7 @@ from stack import Stack
 def infix_to_postfix(string):
     # Convert a string from infix to postfix
     prec = {}
+    prec['**'] = 4
     prec['*'] = 3
     prec['/'] = 3
     prec['+'] = 2
@@ -42,3 +43,4 @@ if __name__ == '__main__':
     print(infix_to_postfix('( A + B ) * ( C + D )'))
     print(infix_to_postfix('( A + B ) * C'))
     print(infix_to_postfix('A + B * C'))
+    print(infix_to_postfix('5 * 3 ** ( 4 - 2 )'))
