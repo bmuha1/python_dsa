@@ -17,4 +17,5 @@ def hot_potato(names, number):
     return queue.dequeue()
 
 if __name__ == '__main__':
-    print('The winner is', hot_potato(['Bill', 'David', 'Susan', 'Jane', 'Kent', 'Brad'], 7))
+    print('The winner is',
+          hot_potato(['Bill', 'David', 'Susan', 'Jane', 'Kent', 'Brad'], 7))
