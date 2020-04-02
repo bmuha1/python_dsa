@@ -15,14 +15,14 @@ def balanced_symbols(string):
         if symbol in '([{':
             s.push(symbol)
         else:
-            if s.isEmpty():
+            if s.is_empty():
                 balanced = False
             else:
                 top = s.pop()
                 if not matches(top, symbol):
                     balanced = False
         i += 1
-    return balanced and s.isEmpty()
+    return balanced and s.is_empty()
 
 
 def matches(open, close):

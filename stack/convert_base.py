@@ -14,7 +14,7 @@ def convert_base(decimal, base):
         remainder.push(rem)
         decimal //= base
     binary = ''
-    while not remainder.isEmpty():
+    while not remainder.is_empty():
         binary += digits[remainder.pop()]
     return binary
 

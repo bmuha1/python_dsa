@@ -10,7 +10,7 @@ class Stack:
         # Initialize an empty Stack
         self.items = []
 
-    def isEmpty(self):
+    def is_empty(self):
         # Check if it's empty
         return self.items == []
 
