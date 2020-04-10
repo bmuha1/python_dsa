@@ -39,3 +39,15 @@ if __name__ == '__main__':
     print_coins(coins_used, amount)
     print('The coins used are:')
     print(coins_used)
+
+    amount = 33
+    coin_list = [1, 5, 8, 10, 25]
+    coins_used = [0] * (amount + 1)
+    coin_count = [0] * (amount + 1)
+
+    print('Making change for', amount, 'requires', end=' ')
+    print(make_change(coin_list, amount, coin_count, coins_used), 'coins')
+    print('They are:')
+    print_coins(coins_used, amount)
+    print('The coins used are:')
+    print(coins_used)
