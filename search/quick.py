@@ -9,7 +9,7 @@ def quick_sort(my_list):
 
 
 def quick_sort_helper(my_list, first, last):
-    # Implement quick sort
+    # Quick sort helper
     if first < last:
         split = partition(my_list, first, last)
         quick_sort_helper(my_list, first, split - 1)
@@ -17,6 +17,7 @@ def quick_sort_helper(my_list, first, last):
 
 
 def partition(my_list, first, last):
+    # Partition list around a pivot point
     pivot = my_list[first]
     left = first + 1
     right = last
