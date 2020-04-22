@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-# Implement binary heap
+# Implement min heap
 
 
-class BinaryHeap:
-    # Implement binary heap
+class MinHeap:
+    # Implement min heap
     def __init__(self):
-        # Initialize binary heap
+        # Initialize min heap
         self.list = [0]
         self.size = 0
 
@@ -52,7 +52,7 @@ class BinaryHeap:
         return min
 
     def build_heap(self, my_list):
-        # Build a binary heap
+        # Build a min heap
         i = len(my_list) // 2
         self.size = len(my_list)
         self.list = [0] + my_list
@@ -61,7 +61,7 @@ class BinaryHeap:
             i -= 1
 
 if __name__ == '__main__':
-    heap = BinaryHeap()
+    heap = MinHeap()
     heap.build_heap([9, 5, 6, 2, 3])
     print(heap.list[1:])
     print(heap.delete_min())
