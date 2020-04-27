@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # Define vertex and graph
+import sys
 
 
 class Vertex:
@@ -8,15 +9,67 @@ class Vertex:
         # Initialize vertex
         self.id = key
         self.connected_to = {}
+        self.color = 'white'
+        self.distance = sys.maxsize
+        self.predecessor = None
+        self.discovery = 0
+        self.finish = 0
 
     def add_neighbor(self, number, weight=0):
         # Add connection to another vertex
         self.connected_to[number] = weight
 
+    def set_color(self, color):
+        # Set color
+        self.color = color
+
+    def set_distance(self, distance):
+        # Set distance
+        self.distance = distance
+
+    def set_predecessor(self, predecessor):
+        # Set predecessor
+        self.predecessor = predecessor
+
+    def set_discovery(self, d_time):
+        # Set discovery time
+        self.discovery = d_time
+
+    def set_finish(self, f_time):
+        # Set finish time
+        self.finish = f_time
+
+    def get_finish(self):
+        # Get finish time
+        return self.finish
+
+    def get_discovery(self):
+        # Get discovery time
+        return self.discovery
+
+    def get_predecessor(self):
+        # Get predecessor
+        return self.predecessor
+
+    def get_distance(self):
+        # Get distance
+        return self.distance
+
+    def get_color(self):
+        # Get color
+        return self.color
+
     def __str__(self):
         # Display vertex
+        '''
         return (str(self.id) + ' connected to: ' +
                 str([x.id for x in self.connected_to]))
+        '''
+        return (str(self.id) + ':color ' + self.color +
+                ':discovery ' + str(self.discovery) +
+                ':finish ' + str(self.finish) +
+                ':distance ' + str(self.distance) +
+                ':predecessor \n\t[' + str(self.predecessor) + ']\n')
 
     def get_connections(self):
         # Return all the vertices in the adjacency list
