@@ -5,6 +5,7 @@
 class QuickFind():
     def __init__(self, size):
         # Initialize list
+        # O(n)
         self.id = [n for n in range(size)]
 
     def __str__(self):
@@ -13,10 +14,12 @@ class QuickFind():
 
     def connected(self, p, q):
         # Determine if p and q are connected
+        # O(1)
         return self.id[p] == self.id[q]
 
     def union(self, p, q):
         # Connect two nodes
+        # O(n)
         pid = self.id[p]
         qid = self.id[q]
         for i in range(len(self.id)):
